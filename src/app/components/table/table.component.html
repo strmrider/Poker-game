@@ -1,0 +1,15 @@
+<div [className]="'poker-table'">
+  <div [className]="'community-cards-container'">
+    <card
+      *ngFor="let card of cards"
+      [number]="card.number"
+      [suit]="card.suit"
+      [type]="'community'"
+    ></card>
+  </div>
+  <div [className]="'table-stats'">
+    <div [className]="'pot'">Pot: {{ pot }}</div>
+    <div [className]="'bet'">Bet: {{ bet }}</div>
+    <div [className]="'round'">Round: {{ round }}</div>
+  </div>
+</div>

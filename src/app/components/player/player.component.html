@@ -1,0 +1,19 @@
+<div [className]="'player-container ' + className">
+  <div [className]="detailsClassName">
+    <div [className]="'player-name'">{{ name }}</div>
+    <div [className]="'player-credit'">{{ credit }}</div>
+  </div>
+  <div [className]="'hole-cards-container'">
+    <ng-container *ngIf="expose; else backCards"
+      ><card
+        *ngFor="let card of cards"
+        [number]="card.number"
+        [suit]="card.suit"
+        [type]="'hole'"
+      ></card
+    ></ng-container>
+    <ng-template #backCards
+      ><card *ngFor="let i of numberOfCards" [type]="'back'"></card
+    ></ng-template>
+  </div>
+</div>

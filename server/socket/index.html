@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+    function emit(msg) {
+      if (!socket) socket = io();
+      socket.emit("get cards", "test message");
+    }
+
+    socket.on("get cards", function(card) {
+      //document.body += card;
+      console.log(JSON.parse(card));
+    });
+  </script>
+  <body>
+    <h1>Socket example</h1>
+    <br /><button onclick='emit("test message")'>Emit</button>
+  </body>
+</html>

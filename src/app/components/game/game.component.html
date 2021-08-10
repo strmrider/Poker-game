@@ -1,0 +1,20 @@
+<div [className]="'poker-game'">
+  <div [className]="'main-game-container'">
+    <player
+      *ngFor="let player of players; let i = index"
+      [className]="'player_' + (i + 1).toString()"
+      [playerObj]="player"
+    ></player>
+    <div [className]="'table-container'"><poker-table></poker-table></div>
+    <div [className]="'user-hole-cards'">
+      <card
+        *ngFor="let card of userCards"
+        [className]="'hole-card'"
+        [number]="card.number"
+        [suit]="card.suit"
+        [type]="'hole'"
+      ></card>
+    </div>
+  </div>
+  <user-bar></user-bar>
+</div>

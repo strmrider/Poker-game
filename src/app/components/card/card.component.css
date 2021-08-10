@@ -1,0 +1,27 @@
+/*.hole-card {
+  position: relative;
+  width: 100px;
+  height: 200px;
+}
+
+.community-card {
+  position: relative;
+  width: 100px;
+  height: 200px;
+}
+
+.back-card {
+  position: relative;
+  width: 100px;
+  height: 200px;
+}*/
+
+.card_image {
+  max-height: 100%;
+  max-width: 100%;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}

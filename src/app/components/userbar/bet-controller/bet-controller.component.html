@@ -1,0 +1,48 @@
+<div [className]="'bet-controller'">
+  <button
+    [className]="'fold-button bet-button'"
+    (click)="fold()"
+    [disabled]="!userturn"
+  >
+    Fold
+  </button>
+  <button
+    [className]="'call-button bet-button'"
+    (click)="call()"
+    [disabled]="!userturn"
+  >
+    Call / Check
+  </button>
+  <button
+    [className]="'raise-button bet-button'"
+    (click)="raise()"
+    [disabled]="!userturn"
+  >
+    Raise
+  </button>
+  <button
+    [className]="'all-in-button bet-button'"
+    (click)="allIn()"
+    [disabled]="!userturn"
+  >
+    All-in
+  </button>
+  <div [className]="'raise-slider-container'">
+    <input
+      #raiseSlider
+      [type]="'range'"
+      [min]="minRaise"
+      [max]="credit"
+      [value]="minRaise"
+      [className]="'raise-slider'"
+      (input)="(undefined)"
+      [disabled]="!userturn"
+    />
+    <span [style.visibility]="visibility">
+      Raise to: <span>{{ currentRaiseValue }}</span>
+    </span>
+    <span [style.visibility]="visibility"
+      >&nbsp;&nbsp;&nbsp;&nbsp;{{ time }}</span
+    >
+  </div>
+</div>

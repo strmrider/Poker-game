@@ -1,0 +1,43 @@
+.player-container {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  padding: 2px;
+}
+
+.player-container-turn {
+  border-style: solid;
+  border-color: coral;
+}
+
+.player-container-inactive {
+  opacity: 0.5;
+}
+
+.player-container-winner {
+  border-style: solid;
+  border-color: gold;
+}
+
+.player-details-container {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  background-color: beige;
+}
+
+.hole-cards-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.hole-cards-container card {
+  padding-right: 2px;
+  width: 80px;
+  height: 120px;
+}
+
+.player-name {
+}
+
+.player-credit {
+}
